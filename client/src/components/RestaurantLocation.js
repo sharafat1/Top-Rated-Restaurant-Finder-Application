@@ -13,6 +13,7 @@ import {
 	Marker,
 } from "react-google-maps";
 
+const API_KEY=''; //put your googlemapkey key here.
 
 
 
@@ -89,7 +90,7 @@ const RestaurantLocation = ({ history }) => {
 				{/* <ReactMapGL
 					{...viewport}
 					mapStyle='mapbox://styles/mapbox/streets-v11'
-					mapboxApiAccessToken='pk.eyJ1IjoiZ2lheWFubnk5MjYiLCJhIjoiY2tjZWRzc3Q0MDdiODJzcWdoZ3oxbXR3cyJ9.56tlkfE_5Gq82aukTLpKfQ'
+					mapboxApiAccessToken='pk..'
 					onViewportChange={setViewport}
 					doubleClickZoom={false}
 				>
@@ -106,9 +107,9 @@ const RestaurantLocation = ({ history }) => {
 					</div>
 				</ReactMapGL> */}
 				{/* <mapFunction lat={latitude} lng={longitude}/> */}
-				{/* AIzaSyBndnZDpB7PGckzS2NNBJX3FVs65TH-uZk */}
-				<MapWithAMarker
-			googleMapURL="https://maps.googleapis.com/maps/api/js?key=&v=2.exp&libraries=geometry,drawing,places"
+				{/*  */}
+				<MapWithAMarker 
+			googleMapURL ={`https://maps.googleapis.com/maps/api/js?key=${API_KEY}`}
 			loadingElement={<div style={{ height: `100%` }} />}
 			containerElement={<div style={{ height: `350px`, width:`1265px` }} />}
 			mapElement={<div style={{ height: `100%` }} />}
